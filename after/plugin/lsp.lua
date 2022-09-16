@@ -1,8 +1,9 @@
 local Remap = require("therry.keymap")
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
+local util = require 'lspconfig/util'
 
-local sumneko_root_path = "/home/therry/personal/lua-language-server"
+local sumneko_root_path = "/home/therryhilaire/personal/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -104,19 +105,41 @@ local function config(_config)
 	}, _config or {})
 end
 
-require("lspconfig").zls.setup(config())
+require("lspconfig").zls.setup(config({
+    root_dir = util.root_pattern('')
+}))
 
-require("lspconfig").tsserver.setup(config())
+require("lspconfig").clangd.setup(config({
+    cmd = { "clangd", "--background-index" },
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    root_dir = util.root_pattern('')
+}))
 
-require("lspconfig").ccls.setup(config())
+require("lspconfig").tsserver.setup(config({
+    root_dir = util.root_pattern('')
+}))
 
-require("lspconfig").jedi_language_server.setup(config())
+require("lspconfig").ccls.setup(config({
+    cmd = { "ccls" },
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    root_dir = util.root_pattern('')
+}))
 
-require("lspconfig").svelte.setup(config())
+require("lspconfig").jedi_language_server.setup(config({
+    root_dir = util.root_pattern('')
+}))
 
-require("lspconfig").solang.setup(config())
+require("lspconfig").svelte.setup(config({
+    root_dir = util.root_pattern('')
+}))
 
-require("lspconfig").cssls.setup(config())
+require("lspconfig").solang.setup(config({
+    root_dir = util.root_pattern('')
+}))
+
+require("lspconfig").cssls.setup(config({
+    root_dir = util.root_pattern('')
+}))
 
 require("lspconfig").gopls.setup(config({
 	cmd = { "gopls", "serve" },
@@ -133,15 +156,14 @@ require("lspconfig").gopls.setup(config({
 -- who even uses this?
 require("lspconfig").rust_analyzer.setup(config({
 	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
-	--[[
     settings = {
         rust = {
             unstable_features = true,
             build_on_save = false,
             all_features = true,
         },
-    }
-    --]]
+    },
+    root_dir = util.root_pattern('')
 }))
 
 require("lspconfig").sumneko_lua.setup(config({
@@ -167,6 +189,7 @@ require("lspconfig").sumneko_lua.setup(config({
 			},
 		},
 	},
+    root_dir = util.root_pattern('')
 }))
 
 local opts = {

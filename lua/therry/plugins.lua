@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     use("simrat39/symbols-outline.nvim")
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
+    use("neovim/nvim-lsp")
 
     -- Colorscheme section
     use("gruvbox-community/gruvbox")
@@ -35,6 +36,5 @@ return require('packer').startup(function(use)
 
     use("nvim-treesitter/playground")
     use("romgrk/nvim-treesitter-context")
-
-    use {'neoclide/coc.nvim', branch = 'release'}
+    use { "catppuccin/nvim", as = "catppuccin" }
 end)

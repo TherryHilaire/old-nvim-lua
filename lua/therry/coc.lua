@@ -1,3 +1,4 @@
+--[[
 local M = {}
 local api = vim.api
 local fn = vim.fn
@@ -64,7 +65,6 @@ function M.show_documentation()
         end
     end
 end
-
 function M.diagnostic_change()
     if vim.v.exiting == vim.NIL then
         local info = fn.getqflist({id = diag_qfid, winid = 0, nr = 0})
@@ -430,3 +430,4 @@ function M.initialize()
 end
 
 return M
+--]]
