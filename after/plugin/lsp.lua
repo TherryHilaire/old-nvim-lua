@@ -125,8 +125,8 @@ require("lspconfig").ccls.setup(config({
     root_dir = util.root_pattern('')
 }))
 
-require("lspconfig").pyls.setup(config({
-    cmd = { "pyls" },
+require("lspconfig").jedi_language_server.setup(config({
+    cmd = { "jedi-language-server" },
     filetypes = { "python" },
     root_dir = util.root_pattern('')
 }))
