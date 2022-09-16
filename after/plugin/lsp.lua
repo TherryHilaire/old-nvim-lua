@@ -64,13 +64,13 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 
 		-- For vsnip user.
-		-- { name = 'vsnip' },
+		{ name = 'vsnip' },
 
 		-- For luasnip user.
 		{ name = "luasnip" },
 
 		-- For ultisnips user.
-		-- { name = 'ultisnips' },
+		{ name = 'ultisnips' },
 
 		{ name = "buffer" },
 
@@ -125,7 +125,9 @@ require("lspconfig").ccls.setup(config({
     root_dir = util.root_pattern('')
 }))
 
-require("lspconfig").jedi_language_server.setup(config({
+require("lspconfig").pyls.setup(config({
+    cmd = { "pyls" },
+    filetypes = { "python" },
     root_dir = util.root_pattern('')
 }))
 
