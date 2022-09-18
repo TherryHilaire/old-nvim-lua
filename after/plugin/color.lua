@@ -16,12 +16,25 @@ function ColorMyPencils()
         bg = "none",
     })
 
+    hl("ColorColumn", {
+        ctermbg = 0,
+        bg = "#555555",
+    })
+
     hl("CursorLineNR", {
         bg = "None"
     })
 
     hl("Normal", {
         bg = "none"
+    })
+
+    hl("LineNr", {
+        fg = "#5eacd3"
+    })
+
+    hl("netrwDir", {
+        fg = "#5eacd3"
     })
 end
 ColorMyPencils()
