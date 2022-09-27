@@ -40,4 +40,5 @@ return require('packer').startup(function(use)
     
     use("neoclide/coc.nvim")
     use("jiangmiao/auto-pairs")
+    use("ycm-core/YouCompleteMe")
 end)

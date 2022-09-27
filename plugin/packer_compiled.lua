@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/therry/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  YouCompleteMe = {
+    loaded = true,
+    path = "/home/therry/.local/share/nvim/site/pack/packer/start/YouCompleteMe",
+    url = "https://github.com/ycm-core/YouCompleteMe"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/therry/.local/share/nvim/site/pack/packer/start/auto-pairs",
