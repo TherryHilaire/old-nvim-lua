@@ -1,11 +1,10 @@
 local nnoremap = require("therry.keymap").nnoremap
 
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
-nnoremap("<leader>q", "<cmd>:q<CR>")
-nnoremap("<leader>s", "<cmd>:w<CR>")
+nnoremap("<C-q>", "<cmd>:q<CR>")
+nnoremap("<C-s>", "<cmd>:w<CR>")
 nnoremap("te", "<cmd>:tabedit<CR>")
 nnoremap("<Tab>", "<cmd>:tabnext<CR>")
-nnoremap("<C-n>", "<cmd>:NvimTreeToggle<CR>")
 
 nnoremap(";", ":")
 

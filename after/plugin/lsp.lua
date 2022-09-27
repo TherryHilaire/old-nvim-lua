@@ -1,9 +1,10 @@
+--[[
 local Remap = require("therry.keymap")
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
 local util = require 'lspconfig/util'
 
-local sumneko_root_path = "/home/therryhilaire/personal/lua-language-server"
+local sumneko_root_path = "/home/therry/personal/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -227,3 +228,4 @@ require("luasnip.loaders.from_vscode").lazy_load({
 	include = nil, -- Load all languages
 	exclude = {},
 })
+--]]

@@ -5,8 +5,8 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-    use 'folke/tokyonight.nvim'
+    use("wbthomason/packer.nvim")
+    use("folke/tokyonight.nvim")
     use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons',}, tag = 'nightly'}
 
     -- All the things
@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/nvim-cmp")
-    use {
+    use{
         'tzachar/cmp-tabnine',
         run = './install.sh',
         requires = 'hrsh7th/nvim-cmp'
@@ -36,5 +36,8 @@ return require('packer').startup(function(use)
 
     use("nvim-treesitter/playground")
     use("romgrk/nvim-treesitter-context")
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use{ "catppuccin/nvim", as = "catppuccin" }
+    
+    use("neoclide/coc.nvim")
+    use("jiangmiao/auto-pairs")
 end)
