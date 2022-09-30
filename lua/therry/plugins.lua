@@ -7,7 +7,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
     use("wbthomason/packer.nvim")
     use("folke/tokyonight.nvim")
-    use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons',}, tag = 'nightly'}
 
     -- All the things
     use("neovim/nvim-lspconfig")
