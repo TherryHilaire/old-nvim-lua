@@ -1,4 +1,4 @@
-vim.g.therry_colorscheme = "catppuccin"
+vim.g.therry_colorscheme = "gruvbox"
 vim.cmd("colorscheme " .. vim.g.therry_colorscheme)
 
 function ColorMyPencils()

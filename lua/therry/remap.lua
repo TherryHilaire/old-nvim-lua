@@ -21,4 +21,3 @@ nnoremap("<leader>pS", "<cmd>PackerStatus<cr>")
 nnoremap("<leader>pu", "<cmd>PackerUpdate<cr>")
 
 nnoremap("<esc>", "<cmd>nohlsearch<cr>")
-
