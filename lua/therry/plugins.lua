@@ -37,7 +37,5 @@ return require('packer').startup(function(use)
     use("romgrk/nvim-treesitter-context")
     use{ "catppuccin/nvim", as = "catppuccin" }
 
-    use{"neoclide/coc.nvim", branch = 'release'}
     use("jiangmiao/auto-pairs")
-    use("ycm-core/YouCompleteMe")
 end)
