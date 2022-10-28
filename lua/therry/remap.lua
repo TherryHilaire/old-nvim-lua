@@ -1,6 +1,8 @@
 local Remap = require("therry.keymap")
 local nnoremap = Remap.nnoremap
 
+nnoremap("<C-a>", "ggVG")
+
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
 nnoremap("<C-q>", "<cmd>:q<CR>")
 nnoremap("<C-s>", "<cmd>:w<CR>")
