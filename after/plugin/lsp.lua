@@ -2,7 +2,7 @@ local Remap = require("therry.keymap")
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
 
-local sumneko_root_path = "/home/therry/personal/sumneko"
+local sumneko_root_path = "/home/therry/personal/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 
 -- Setup nvim-cmp.
