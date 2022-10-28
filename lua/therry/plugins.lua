@@ -38,4 +38,9 @@ return require('packer').startup(function(use)
     use{ "catppuccin/nvim", as = "catppuccin" }
 
     use("jiangmiao/auto-pairs")
+
+    -- Telescope for Chads
+    use("nvim-telescope/telescope.nvim")
+    use("nvim-lua/plenary.nvim")
+    use("nvim-lua/popup.nvim")
 end)
