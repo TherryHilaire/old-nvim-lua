@@ -9,8 +9,6 @@ nnoremap("<C-s>", "<cmd>:w<CR>")
 nnoremap("te", "<cmd>:tabedit<CR>")
 nnoremap("<Tab>", "<cmd>:tabnext<CR>")
 
-nnoremap(";", ":")
-
 nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-j>", "<C-w>j")
 nnoremap("<C-k>", "<C-w>k")
