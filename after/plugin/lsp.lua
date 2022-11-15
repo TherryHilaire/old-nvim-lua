@@ -113,7 +113,10 @@ end
 
 require("lspconfig").zls.setup(config())
 
-require("lspconfig").tsserver.setup(config())
+require("lspconfig").tsserver.setup(config({
+    cmd = { "typescript-language-server", "--stdio" },
+    -- filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+}))
 
 require("lspconfig").ccls.setup(config())
 
